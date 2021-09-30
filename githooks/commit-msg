@@ -1,0 +1,11 @@
+#!/bin/sh
+
+MSG=$(awk '{printf("%s",$0)}' $1)
+if [[ $MSG =~ ^(feature|fix|docs|style|refactor|perf|test|build|ci|chore|revert)\(.*\):.*$ ]]; then
+  echo -e "\033[32m commit success! \033[0m"
+else
+  echo -e "\033[31m Error: the commit message is irregular \033[m"
+  echo -e "\033[31m Error: type must be one of [feature,fix,docs,style,refactor,perf,test,build,ci,chore,revert] \033[m"
+  echo -e "\033[31m eg: feature(user): add the user login \033[m"
+  exit 1
+fi

@@ -1,0 +1,34 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.2"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+// 插件：https://github.com/JetBrains/gradle-idea-ext-plugin/wiki#gradle-tasks-triggers-settings
+plugins {
+    id "org.jetbrains.gradle.plugin.idea-ext" version "1.0.1"
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+task copyGitHookScriptToLocalDir(type: Copy) {
+    from './githooks/'
+    into './.git/hooks'
+}
+
+// 在Sync之后，将githooks中的文件复制到.git/hooks
+idea.project.settings {
+    taskTriggers {
+        afterSync tasks.getByName("copyGitHookScriptToLocalDir")
+    }
+}
