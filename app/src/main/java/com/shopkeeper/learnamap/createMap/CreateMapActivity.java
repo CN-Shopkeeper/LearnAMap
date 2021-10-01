@@ -8,13 +8,14 @@ import androidx.databinding.DataBindingUtil;
 
 import com.shopkeeper.learnamap.R;
 import com.shopkeeper.learnamap.RedirectActivity;
-import com.shopkeeper.learnamap.createMap.maps.DisplayMapActivity;
+import com.shopkeeper.learnamap.createMap.maps.diaplayBlueDot.DisplayBlueDotActivity;
+import com.shopkeeper.learnamap.createMap.maps.diasplayMap.DisplayMapActivity;
 import com.shopkeeper.learnamap.databinding.ActivityCreateMapBinding;
 
 public class CreateMapActivity extends RedirectActivity {
 
-    private final String[] names = {"展示地图"};
-    private final Class<?>[] classes = {DisplayMapActivity.class};
+    private final String[] names = {"显示地图", "显示定位蓝点"};
+    private final Class<?>[] classes = {DisplayMapActivity.class, DisplayBlueDotActivity.class};
 
     private ActivityCreateMapBinding binding;
 

@@ -1,4 +1,4 @@
-package com.shopkeeper.learnamap.createMap.maps;
+package com.shopkeeper.learnamap.createMap.maps.diasplayMap;
 
 import android.os.Bundle;
 
@@ -17,6 +17,7 @@ public class DisplayMapActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_display_map);
+        getLifecycle().addObserver(binding.mapView);
         binding.mapView.onCreate(savedInstanceState);
 //        AMap aMap = null;
 //        aMap = binding.mapView.getMap();

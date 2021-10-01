@@ -3,6 +3,14 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('G:\\Androidstudio\\keys\\debug.jks')
+            storePassword 'chenxi_20000905'
+            keyAlias 'key0'
+            keyPassword 'chenxi_20000905'
+        }
+    }
     compileSdk 30
 
     dataBinding{

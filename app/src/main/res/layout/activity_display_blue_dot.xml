@@ -9,9 +9,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".createMap.maps.diasplayMap.DisplayMapActivity">
+        tools:context=".createMap.maps.diaplayBlueDot.DisplayBlueDotActivity">
 
-        <com.shopkeeper.learnamap.createMap.maps.diasplayMap.LifeCycleMapView
+        <com.shopkeeper.learnamap.createMap.maps.diaplayBlueDot.LifeCycleMapView
             android:id="@+id/mapView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

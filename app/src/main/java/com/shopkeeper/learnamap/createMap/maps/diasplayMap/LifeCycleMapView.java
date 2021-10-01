@@ -1,4 +1,4 @@
-package com.shopkeeper.learnamap.createMap.maps;
+package com.shopkeeper.learnamap.createMap.maps.diasplayMap;
 
 import android.content.Context;
 import android.util.AttributeSet;
