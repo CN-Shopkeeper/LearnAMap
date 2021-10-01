@@ -17,19 +17,27 @@
         tools:ignore="ProtectedPermissions" /> <!-- 允许读设备等信息，用于问题排查 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--声明后台定位权限-->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
     <application
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:fullBackupContent="true"
         android:theme="@style/Theme.LearnAMap">
+        <activity
+            android:name=".createMap.maps.diaplayBlueDot.DisplayBlueDotActivity"
+            android:exported="true" />
         <activity
             android:name=".createMap.CreateMapActivity"
             android:exported="true" />
         <activity
-            android:name=".createMap.maps.DisplayMapActivity"
+            android:name=".createMap.maps.diasplayMap.DisplayMapActivity"
             android:exported="true" />
 
         <meta-data
