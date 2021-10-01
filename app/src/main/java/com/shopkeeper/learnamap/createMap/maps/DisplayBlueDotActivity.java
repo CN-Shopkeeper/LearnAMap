@@ -1,20 +1,13 @@
-package com.shopkeeper.learnamap.createMap.maps.diaplayBlueDot;
+package com.shopkeeper.learnamap.createMap.maps;
 
 import android.os.Bundle;
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import com.amap.api.maps.AMap;
 import com.amap.api.maps.model.MyLocationStyle;
-import com.shopkeeper.learnamap.R;
-import com.shopkeeper.learnamap.databinding.ActivityDisplayBlueDotBinding;
+import com.shopkeeper.learnamap.MapActivity;
 
-public class DisplayBlueDotActivity extends AppCompatActivity {
-
-    private ActivityDisplayBlueDotBinding binding;
+public class DisplayBlueDotActivity extends MapActivity {
 
     private AMap aMap;
     private MyLocationStyle myLocationStyle;
@@ -22,10 +15,6 @@ public class DisplayBlueDotActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_display_blue_dot);
-        getLifecycle().addObserver(binding.mapView);
-        binding.mapView.onCreate(savedInstanceState);
-
         initMap();
     }
 
@@ -47,11 +36,5 @@ public class DisplayBlueDotActivity extends AppCompatActivity {
         aMap.getUiSettings().setMyLocationButtonEnabled(true);// 设置默认定位按钮是否显示
         aMap.setMyLocationEnabled(true);// 设置为true表示显示定位层并可触发定位，false表示隐藏定位层并不可触发定位，默认是false
         aMap.addOnMyLocationChangeListener(location -> Log.i("DisplayBlueDotActivity", "onMyLocationChange: " + location));
-    }
-
-    @Override
-    protected void onSaveInstanceState(@NonNull Bundle outState) {
-        super.onSaveInstanceState(outState);
-        binding.mapView.onSaveInstanceState(outState);
     }
 }
