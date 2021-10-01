@@ -40,6 +40,9 @@
         <activity
             android:name=".createMap.maps.DisplayInnerDoorActivity"
             android:exported="true" />
+        <activity
+            android:name=".createMap.maps.ChangeLayerActivity"
+            android:exported="true" />
 
         <meta-data
             android:name="com.amap.api.v2.apikey"
