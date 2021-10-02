@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil;
 
 import com.shopkeeper.learnamap.databinding.LayoutMapBinding;
 
-public class MapActivity extends AppCompatActivity {
+public abstract class MapActivity extends AppCompatActivity {
 
     protected LayoutMapBinding binding;
 

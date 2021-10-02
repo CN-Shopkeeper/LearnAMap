@@ -2,12 +2,8 @@ package com.shopkeeper.learnamap.createMap;
 
 
 import android.os.Bundle;
-import android.widget.LinearLayout;
-
-import androidx.databinding.DataBindingUtil;
 
 import com.amap.api.maps.offlinemap.OfflineMapActivity;
-import com.shopkeeper.learnamap.R;
 import com.shopkeeper.learnamap.RedirectActivity;
 import com.shopkeeper.learnamap.createMap.maps.ChangeLayerActivity;
 import com.shopkeeper.learnamap.createMap.maps.CustomMapActivity;
@@ -15,7 +11,6 @@ import com.shopkeeper.learnamap.createMap.maps.DisplayBlueDotActivity;
 import com.shopkeeper.learnamap.createMap.maps.DisplayEnglishMapActivity;
 import com.shopkeeper.learnamap.createMap.maps.DisplayInnerDoorActivity;
 import com.shopkeeper.learnamap.createMap.maps.DisplayMapActivity;
-import com.shopkeeper.learnamap.databinding.ActivityCreateMapBinding;
 
 public class CreateMapActivity extends RedirectActivity {
 
@@ -30,13 +25,9 @@ public class CreateMapActivity extends RedirectActivity {
             CustomMapActivity.class
     };
 
-    private ActivityCreateMapBinding binding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_create_map);
-        initData();
     }
 
     @Override
@@ -47,10 +38,5 @@ public class CreateMapActivity extends RedirectActivity {
     @Override
     protected Class<?>[] getClasses() {
         return classes;
-    }
-
-    @Override
-    protected LinearLayout getLinearLayout() {
-        return binding.linearLayout;
     }
 }

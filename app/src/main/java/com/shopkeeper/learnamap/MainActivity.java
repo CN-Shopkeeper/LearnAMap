@@ -9,13 +9,10 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
-import androidx.databinding.DataBindingUtil;
 
 import com.shopkeeper.learnamap.createMap.CreateMapActivity;
-import com.shopkeeper.learnamap.databinding.ActivityMainBinding;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -25,7 +22,6 @@ public class MainActivity extends RedirectActivity {
 
     private final String[] names = {"创建地图"};
     private final Class<?>[] classes = {CreateMapActivity.class};
-    private ActivityMainBinding binding;
 
     //如果设置了target > 28，需要增加这个权限，否则不会弹出"始终允许"这个选择框
     private static final String BACK_LOCATION_PERMISSION = "android.permission.ACCESS_BACKGROUND_LOCATION";
@@ -52,11 +48,6 @@ public class MainActivity extends RedirectActivity {
         return classes;
     }
 
-    @Override
-    protected LinearLayout getLinearLayout() {
-        return binding.linearLayout;
-    }
-
     //是否需要检测后台定位权限，设置为true时，如果用户没有给予后台定位权限会弹窗提示
     private boolean needCheckBackLocation = false;
     /**
@@ -67,8 +58,6 @@ public class MainActivity extends RedirectActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        initData();
         if (Build.VERSION.SDK_INT > 28
                 && getApplicationContext().getApplicationInfo().targetSdkVersion > 28) {
             needPermissions = new String[]{
