@@ -13,7 +13,7 @@ import com.amap.api.maps.AMapOptions;
 import com.amap.api.maps.UiSettings;
 import com.shopkeeper.learnamap.MapActivity;
 
-public class UISettingsActivity extends MapActivity {
+public class InteractWithControlActivity extends MapActivity {
 
     private final int BOTTOM_LEFT = 1;
     private final int BOTTOM_CENTER = 2;

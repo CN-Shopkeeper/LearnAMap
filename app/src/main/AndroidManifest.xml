@@ -29,7 +29,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnAMap">
         <activity
-            android:name=".interactWithMap.maps.UISettingsActivity"
+            android:name=".interactWithMap.maps.InteractWithControlActivity"
             android:exported="true" />
         <activity
             android:name=".interactWithMap.InteractWithMapActivity"

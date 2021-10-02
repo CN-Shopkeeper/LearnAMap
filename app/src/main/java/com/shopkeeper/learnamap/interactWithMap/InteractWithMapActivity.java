@@ -3,13 +3,13 @@ package com.shopkeeper.learnamap.interactWithMap;
 import android.os.Bundle;
 
 import com.shopkeeper.learnamap.RedirectActivity;
-import com.shopkeeper.learnamap.interactWithMap.maps.UISettingsActivity;
+import com.shopkeeper.learnamap.interactWithMap.maps.InteractWithControlActivity;
 
 public class InteractWithMapActivity extends RedirectActivity {
 
     private final String[] names = {"控件交互"};
     private final Class<?>[] classes = {
-            UISettingsActivity.class
+            InteractWithControlActivity.class
     };
 
     @Override
