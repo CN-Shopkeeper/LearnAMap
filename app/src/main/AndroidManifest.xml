@@ -29,6 +29,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnAMap">
         <activity
+            android:name=".interactWithMap.maps.UISettingsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".interactWithMap.InteractWithMapActivity"
+            android:exported="true" />
+        <activity
             android:name=".createMap.maps.CustomMapActivity"
             android:exported="true" />
         <activity
