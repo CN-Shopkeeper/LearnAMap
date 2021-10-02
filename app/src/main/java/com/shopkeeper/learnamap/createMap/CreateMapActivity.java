@@ -6,6 +6,7 @@ import android.widget.LinearLayout;
 
 import androidx.databinding.DataBindingUtil;
 
+import com.amap.api.maps.offlinemap.OfflineMapActivity;
 import com.shopkeeper.learnamap.R;
 import com.shopkeeper.learnamap.RedirectActivity;
 import com.shopkeeper.learnamap.createMap.maps.ChangeLayerActivity;
@@ -16,12 +17,13 @@ import com.shopkeeper.learnamap.databinding.ActivityCreateMapBinding;
 
 public class CreateMapActivity extends RedirectActivity {
 
-    private final String[] names = {"显示地图", "显示定位蓝点", "显示室内地图", "切换地图图层"};
+    private final String[] names = {"显示地图", "显示定位蓝点", "显示室内地图", "切换地图图层", "使用离线地图(官方UI组件)"};
     private final Class<?>[] classes = {
             DisplayMapActivity.class,
             DisplayBlueDotActivity.class,
             DisplayInnerDoorActivity.class,
-            ChangeLayerActivity.class
+            ChangeLayerActivity.class,
+            OfflineMapActivity.class
     };
 
     private ActivityCreateMapBinding binding;
