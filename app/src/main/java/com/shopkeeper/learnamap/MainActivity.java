@@ -13,6 +13,7 @@ import android.provider.Settings;
 import androidx.annotation.NonNull;
 
 import com.shopkeeper.learnamap.createMap.CreateMapActivity;
+import com.shopkeeper.learnamap.drawOnMap.DrawOnMapActivity;
 import com.shopkeeper.learnamap.interactWithMap.InteractWithMapActivity;
 
 import java.lang.reflect.Method;
@@ -21,8 +22,12 @@ import java.util.List;
 
 public class MainActivity extends RedirectActivity {
 
-    private final String[] names = {"创建地图", "与地图交互"};
-    private final Class<?>[] classes = {CreateMapActivity.class, InteractWithMapActivity.class};
+    private final String[] names = {"创建地图", "与地图交互", "在地图上绘制"};
+    private final Class<?>[] classes = {
+            CreateMapActivity.class,
+            InteractWithMapActivity.class,
+            DrawOnMapActivity.class
+    };
 
     //如果设置了target > 28，需要增加这个权限，否则不会弹出"始终允许"这个选择框
     private static final String BACK_LOCATION_PERMISSION = "android.permission.ACCESS_BACKGROUND_LOCATION";

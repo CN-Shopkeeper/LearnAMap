@@ -29,6 +29,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnAMap">
         <activity
+            android:name=".drawOnMap.maps.DrawPointActivity"
+            android:exported="true" />
+        <activity
+            android:name=".drawOnMap.DrawOnMapActivity"
+            android:exported="true" />
+        <activity
             android:name=".interactWithMap.maps.ScreenshotActivity"
             android:exported="true" />
         <activity
