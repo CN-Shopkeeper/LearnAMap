@@ -3,13 +3,15 @@ package com.shopkeeper.learnamap.drawOnMap;
 import android.os.Bundle;
 
 import com.shopkeeper.learnamap.RedirectActivity;
+import com.shopkeeper.learnamap.drawOnMap.maps.DrawLineActivity;
 import com.shopkeeper.learnamap.drawOnMap.maps.DrawPointActivity;
 
 public class DrawOnMapActivity extends RedirectActivity {
 
-    private final String[] names = {"绘制点标记"};
+    private final String[] names = {"绘制点标记", "绘制线"};
     private final Class<?>[] classes = {
             DrawPointActivity.class,
+            DrawLineActivity.class
     };
 
     @Override
