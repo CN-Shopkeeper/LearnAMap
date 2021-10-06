@@ -30,7 +30,6 @@ public class DrawLineActivity extends MapActivity {
         initView();
     }
 
-    @SuppressLint("SetTextI18n")
     private void initView() {
         AMap aMap = binding.mapView.getMap();
         List<LatLng> latLngs = new ArrayList<>();
@@ -41,6 +40,12 @@ public class DrawLineActivity extends MapActivity {
         Polyline polyline = aMap.addPolyline(new PolylineOptions().
                 addAll(latLngs).width(10).color(Color.argb(255, 1, 1, 1)));
 
+
+        initControl(polyline);
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void initControl(Polyline polyline) {
         LinearLayout linearLayout = new LinearLayout(this);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
         linearLayout.setId(LINEARLAYOUT_ID);
@@ -60,7 +65,7 @@ public class DrawLineActivity extends MapActivity {
         colorSB.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                polyline.setColor(Color.argb(255, progress, 1, 1));
+                polyline.setColor(Color.argb(255, progress / 100 * 256, 1, 1));
             }
 
             @Override
@@ -104,7 +109,7 @@ public class DrawLineActivity extends MapActivity {
 //        粗细
         LinearLayout widthLL = new LinearLayout(this);
         TextView widthTV = new TextView(this);
-        widthTV.setText("透明度");
+        widthTV.setText("粗 细");
         SeekBar widthSB = new SeekBar(this);
         widthLL.addView(widthTV);
         widthLL.addView(widthSB);

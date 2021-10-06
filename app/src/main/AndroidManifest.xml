@@ -29,6 +29,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnAMap">
         <activity
+            android:name=".drawOnMap.maps.DrawPlaneActivity"
+            android:exported="true" />
+        <activity
             android:name=".drawOnMap.maps.DrawLineActivity"
             android:exported="true" />
         <activity
