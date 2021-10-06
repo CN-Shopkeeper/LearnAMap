@@ -29,6 +29,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnAMap">
         <activity
+            android:name=".drawOnMap.maps.TraceCorrectionActivity"
+            android:exported="true" />
+        <activity
             android:name=".drawOnMap.maps.Draw3DModelActivity"
             android:exported="true" />
         <activity
